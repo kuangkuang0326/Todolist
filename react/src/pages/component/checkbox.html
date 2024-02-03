@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 隐藏原生复选框 */
+        input[type="checkbox"] {
+            display: none;
+        }
+
+        /* 创建自定义复选框的外层容器 */
+        .checkbox-container {
+            position: relative;
+            width: 20px;
+            /* 调整容器的宽度 */
+            height: 20px;
+            /* 调整容器的高度 */
+        }
+
+        /* 创建自定义复选框的内部样式 */
+        .checkbox-container::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border: 2px solid #333;
+            /* 设置边框样式 */
+            border-radius: 50%;
+            /* 将复选框形状改为圆形 */
+            box-sizing: border-box;
+            background-color: white;
+            /* 设置背景色 */
+        }
+
+        /* 显示内部的填充，当复选框被选中时 */
+        input[type="checkbox"]:checked+.checkbox-container::before {
+            background-color: #4CAF50;
+            /* 设置选中时的背景色 */
+            border-color: #4CAF50;
+            /* 设置选中时的边框颜色 */
+        }
+    </style>
+</head>
+
+<body>
+    <label class="checkbox-container">
+        <input type="checkbox">
+    </label>
+</body>
+
+</html>

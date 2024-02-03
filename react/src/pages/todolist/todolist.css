@@ -503,8 +503,14 @@ input[type="checkbox"]:checked+.checkbox-lable::before {
   border: none;
   box-shadow: none;
 }
+
 .changeinput {
-border: none;
-box-shadow: none;
-font-size: 25px;
+  border: none;
+  box-shadow: none;
+  font-size: 25px;
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
 }

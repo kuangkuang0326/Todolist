@@ -2,16 +2,21 @@ import React, { useEffect, useState } from 'react'
 
 export default function Addition2() {
     const [text, setText] = useState('')
+
+
     // list用以增删事件改变
     const [list, setList] = useState([])
     // viewlist 用以存储所有事件
     const [viewList, setviewList] = useState([])
     const [checked, setChecked] = useState(false)
 
+
     // 改变li标签内容
     const [isEditing, setEditing] = useState(false)     // 状态
     const [editedText, setEditedText] = useState("")      // 内容
     const [editId, setEditId] = useState("")      // id
+
+
 
 
     // 这里是渲染列表
@@ -41,8 +46,6 @@ export default function Addition2() {
         newlist[index].checked = !newlist[index].checked
         setviewList(newlist)
     }
-
-
 
 
 
@@ -105,6 +108,8 @@ export default function Addition2() {
 
 
 
+
+
     // 这里是改动
     const updatelist = (id, newtext) => {
         const updateNewList = viewList.map(item => {
@@ -124,8 +129,6 @@ export default function Addition2() {
         setEditedText(item.text)
     }
 
-
-
     // 失去焦点后保存更新
     const handleBlur = (id) => {
         // setEditing(false);
@@ -135,6 +138,8 @@ export default function Addition2() {
         setEditedText('')
 
     }
+
+    
 
     return (
         <div>
